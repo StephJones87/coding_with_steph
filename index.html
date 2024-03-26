@@ -8,13 +8,18 @@
         body, html {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
         }
 
         header {
-            background-color: #f0f0f0;
-            padding: 20px 0;
+            background-color: #88D0B0; /* Bianchi Celeste */
+            color: #fff;
+            padding: 20px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav ul {
@@ -22,32 +27,53 @@
             padding: 0;
             display: flex;
             justify-content: center;
+            margin-top: 20px;
         }
 
         nav ul li {
-            margin: 0 15px;
+            margin: 0 20px;
         }
 
         nav ul li a {
             text-decoration: none;
-            color: #333;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover, nav ul li a:focus {
+            color: #FFD700; /* A bold contrast for hover/focus, adjust as you like */
         }
 
         main {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
-            padding: 20px;
+            padding: 40px;
         }
 
         section {
+            background: #fff;
+            border-radius: 8px;
             padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        section:hover {
+            transform: scale(1.02);
+            transition: transform 0.2s ease-in-out;
         }
 
         h2 {
-            color: #0275d8;
+            color: #88D0B0; /* Bianchi Celeste */
+        }
+
+        footer {
+            background-color: #88D0B0; /* Bianchi Celeste */
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: sticky;
+            bottom: 0;
         }
     </style>
 </head>
@@ -67,24 +93,27 @@
     <main>
         <section id="about">
             <h2>About</h2>
-            <p>Welcome to Coding with Steph! I'm passionate about sharing knowledge on coding, especially in the field of clinical data engineering. Join me on this journey to explore the world of coding together.</p>
+            <p>Welcome to Coding with Steph! This section will tell you all about Steph's coding journey and the mission behind this website.</p>
         </section>
         <section id="resources">
             <h2>Resources</h2>
-            <p>Find curated lists of resources to boost your coding skills, including tutorials, tools, and practice exercises.</p>
+            <p>Explore a carefully curated list of coding resources, including books, websites, and tools to enhance your skills.</p>
         </section>
         <section id="communities">
             <h2>Communities</h2>
-            <p>Connect with fellow coders, share your projects, and find support in our vibrant communities.</p>
+            <p>Join our coding community! Connect, share, and learn from fellow coding enthusiasts around the globe.</p>
         </section>
         <section id="blog">
             <h2>Blog</h2>
-            <p>Stay updated with the latest in coding through my blog. I share insights on coding challenges, industry trends, and more.</p>
+            <p>Stay updated with the latest coding tips, industry news, and personal projects in the world of coding.</p>
         </section>
         <section id="clinical-data-engineer">
             <h2>Clinical Data Engineer</h2>
-            <p>Dive into the niche of clinical data engineering. Discover tools, methodologies, and insights into working as a clinical data engineer.</p>
+            <p>Delve into the niche field of Clinical Data Engineering with insights, case studies, and resources tailored for aspiring engineers.</p>
         </section>
     </main>
+    <footer>
+        <p>&copy; 2024 Coding with Steph. All rights reserved.</p>
+    </footer>
 </body>
 </html>
