@@ -2,32 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta viewport="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding with Steph</title>
     <style>
+        :root {
+            --bg-color: #121212;
+            --text-color: #E0E0E0;
+            --accent-color: #88D0B0;
+            --hover-accent-color: #FFD700;
+            --box-bg-color: #1E1E1E;
+            --header-footer-bg-color: #282828;
+        }
+
         body, html {
             margin: 0;
             padding: 0;
-            font-family: sans-serif; /* Generic sans-serif */
-            background-color: #121212; /* Very dark grey */
-            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
         }
 
-        .menu-icon {
-            display: none;
-            font-size: 30px;
-            cursor: pointer;
-            color: #88D0B0; /* Bianchi Celeste for the icon */
-        }
-
-        header {
-            background-color: #202020; /* Dark grey */
+        header, footer {
+            background-color: var(--header-footer-bg-color);
             color: #fff;
-            padding: 20px;
+            padding: 1rem;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 1000;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
 
         nav ul {
@@ -35,25 +44,53 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            margin-top: 20px;
-        }
-
-        nav ul li {
-            margin: 0 20px;
+            gap: 20px;
         }
 
         nav ul li a {
             text-decoration: none;
-            color: #88D0B0; /* Bianchi Celeste */
+            color: var(--accent-color);
             font-weight: bold;
         }
 
-        nav ul li a:hover, nav ul li a:focus {
-            color: #FFD700; /* A bright contrast for hover/focus */
-            transition: color 0.3s ease;
+        nav ul li a:hover {
+            color: var(--hover-accent-color);
         }
 
-        @media (max-width: 600px) {
+        .menu-icon {
+            display: none;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+
+        section {
+            background: var(--box-bg-color);
+            border-radius: 12px;
+            padding: 20px;
+            transition: transform 0.3s ease;
+            border: 1px solid var(--accent-color);
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+                font-size: 1.8rem;
+                margin-bottom: 1rem;
+            }
+
             nav ul {
                 flex-direction: column;
                 display: none;
@@ -63,46 +100,6 @@
                 text-align: center;
                 margin: 10px 0;
             }
-
-            .menu-icon {
-                display: block;
-            }
-        }
-
-        main {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 40px;
-        }
-
-        section {
-            background: #1E1E1E; /* Slightly lighter dark grey */
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 2px 4px rgba(255,255,255,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        section:hover {
-            transform: scale(1.03);
-        }
-
-        h2 {
-            color: #88D0B0; /* Bianchi Celeste */
-        }
-
-        p {
-            color: #CCCCCC; /* Light grey for better readability */
-        }
-
-        footer {
-            background-color: #202020; /* Dark grey */
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            position: sticky;
-            bottom: 0;
         }
     </style>
 </head>
@@ -117,22 +114,26 @@
                 <li><a href="#communities">Communities</a></li>
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#clinical-data-engineer">Clinical Data Engineer</a></li>
-                <li><a href="#ctos-interviews">CTO's Interviews</a></li> <!-- Updated section -->
+                <li><a href="#ctos-interviews">CTO's Interviews</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="about">
             <h2>About</h2>
-            <p>Welcome to Coding with Steph! This section will tell you all about Steph's coding journey and the mission behind this website.</p>
+            <p>This section is all about Steph's journey in coding and the creation of this website. A personal story can go a long way in connecting with readers.</p>
         </section>
         <section id="resources">
             <h2>Resources</h2>
-            <p>Explore a carefully curated list of coding resources, including books, websites, and tools to enhance your skills.</p>
+            <p>Here, find a collection of resources that have been invaluable in the coding journey. From tutorials to tools, this is a curated list for enthusiasts at all levels.</p>
         </section>
         <section id="communities">
             <h2>Communities</h2>
-            <p>Join our coding community! Connect, share, and learn from fellow coding enthusiasts around the globe.</p>
+            <p>Community is at the heart of learning. This section connects readers with various coding communities, encouraging sharing, support, and collaboration.</p>
         </section>
         <section id="blog">
-            <h2>Blog</
+            <h2>Blog</h2>
+            <p>The blog is where you'll find articles, insights, and tips on everything coding. It's a mix of personal experiences and professional advice.</p>
+        </section>
+        <section id="clinical-data-engineer">
+            <h2>Clinical Data Engineer</h2
