@@ -1,3 +1,4 @@
+
 /* Basic Reset */
 *, *:before, *:after {
     box-sizing: border-box;
@@ -6,8 +7,8 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Helvetica Neue', sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F0F4F8;
     color: #333;
     line-height: 1.6;
 }
@@ -20,8 +21,8 @@ body {
 }
 
 header {
-    background-color: #88CAB6; /* Bianchi green */
-    color: #fff;
+    background-color: #005A87; /* Darker blue */
+    color: #ffffff;
     padding: 20px 0;
     text-align: center;
     font-size: 24px;
@@ -31,19 +32,19 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    background: #333;
+    background: #007BFF; /* Brighter blue */
     margin-top: 20px;
 }
 
 nav a {
-    color: #fff;
+    color: #ffffff;
     padding: 10px 20px;
     text-decoration: none;
     transition: background-color 0.3s ease-in-out;
 }
 
 nav a:hover {
-    background-color: #88CAB6;
+    background-color: #005A87;
 }
 
 .main-content {
@@ -54,14 +55,14 @@ nav a:hover {
 }
 
 .content-section {
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #007BFF;
+    color: #ffffff;
     text-align: center;
     padding: 10px 0;
     margin-top: 20px;
