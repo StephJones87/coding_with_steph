@@ -1,3 +1,2 @@
-# menopause_dataset
-A project building up a menopause dataset
-This project will use the twitter API
+# coding_with_steph
+A site about how to learn to code. 
