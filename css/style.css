@@ -7,8 +7,8 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #FFFFFF; /* Pure white background */
+    font-family: 'Arial', sans-serif;
+    background-color: #FFFFFF;
     color: #333;
     line-height: 1.6;
 }
@@ -21,7 +21,7 @@ body {
 }
 
 header {
-    background-color: #FFFFFF; /* Header with white background */
+    background-color: #FFFFFF;
     color: #333;
     padding: 20px 0;
     text-align: center;
@@ -32,9 +32,9 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    background: #FFFFFF; /* Nav bar with white background */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
-    margin-bottom: 20px; /* Space below the nav bar */
+    flex-wrap: wrap;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 nav a {
@@ -45,23 +45,22 @@ nav a {
 }
 
 nav a:hover {
-    color: #007BFF; /* Highlight color on hover */
+    color: #007BFF;
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
 }
 
 .main-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.content-section {
-    background-color: #FFFFFF; /* White background for content sections */
     padding: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    text-align: center;
 }
 
 .footer {
-    background-color: #F8F9FA; /* Light grey background for footer */
+    background-color: #F8F9FA;
     color: #333;
     text-align: center;
     padding: 10px 0;
